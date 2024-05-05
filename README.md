@@ -17,4 +17,8 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case big $\Theta$ time complexity of your algorithm?
 
-The worst case time complexity for the are_isomorphic function is $\Theta(n^2)$. $n$ represents the number of vertices in the graphs. This is because the function iterates over each vertex in the first graph and for each of these vertices, it iterates over all vertices in the second graph to check if there is a vertex with the same degree. The pair of nested loops perform a comparison operation and results in a quadratic time complexity. The other operations in the function like checking the number of vertices and edges and returning the result are performed in constant time and don't really impact the overall time complexity. So the dominant factor in the time complexity is the quadratic term and a worst-case time complexity of $\Theta(n^2)$.
+The time complexity of the function is $\Theta(n!)$. The function uses a brute force approach to check all possible permutations of the vertices in graph2 to see if any of them make its adjacency matrix equal to the adjacency matrix of graph1.
+The number of permutations of a set of size $n$ is $n!$. The time complexity of generating and checking all permutations is $\Theta(n!)$.
+The function also computes the adjacency matrix of each graph, which takes $\Theta(n^2)$ time and checks if two matrices are equal which also takes $\Theta(n^2)$ time. But these operations are dominated by the permutation checking so the overall time complexity of the function is $\Theta(n!)$.
+
+This is super bad for large graphs
