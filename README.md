@@ -21,5 +21,6 @@ The time complexity of the function is $\Theta(n!)$. The function uses a brute f
 The number of permutations of a set of size $n$ is $n!$. The time complexity of generating and checking all permutations is $\Theta(n!)$.
 The function also computes the adjacency matrix of each graph, which takes $\Theta(n^2)$ time and checks if two matrices are equal which also takes $\Theta(n^2)$ time. But these operations are dominated by the permutation checking so the overall time complexity of the function is $\Theta(n!)$.
 
+Soure:
 I used chatGPT to help  me make the test and workflow for the action. I'm not that familiar with Github to know how to do that. I alos used it to help me with the code
 This is super bad for large graphs
