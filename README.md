@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/NYae883E)
 # Graph Isomorphism
 
 Devise an algorithm to determine whether two given graphs are isomorphic or not.
@@ -15,3 +16,11 @@ the function and run automatically when you commit through a GitHub action.
 ## Runtime Analysis
 
 What is the worst-case big $\Theta$ time complexity of your algorithm?
+
+The time complexity of the function is $\Theta(n!)$. The function uses a brute force approach to check all possible permutations of the vertices in graph2 to see if any of them make its adjacency matrix equal to the adjacency matrix of graph1.
+The number of permutations of a set of size $n$ is $n!$. The time complexity of generating and checking all permutations is $\Theta(n!)$.
+The function also computes the adjacency matrix of each graph, which takes $\Theta(n^2)$ time and checks if two matrices are equal which also takes $\Theta(n^2)$ time. But these operations are dominated by the permutation checking so the overall time complexity of the function is $\Theta(n!)$.
+
+Soure:
+I used chatGPT to help  me make the test and workflow for the action. I'm not that familiar with Github to know how to do that. I alos used it to help me with the code
+This is super bad for large graphs
